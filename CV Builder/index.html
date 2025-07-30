@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Professional CV Builder | A4 Format</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<h1><i class="fas fa-file-alt"></i> Professional CV Builder</h1>
+
+<div class="container">
+  <!-- Form Section -->
+  <div class="form-section">
+    <h2><i class="fas fa-user-edit"></i> Personal Information</h2>
+    
+    <div class="form-group">
+      <label for="name">Full Name</label>
+      <input type="text" id="name" placeholder="e.g. Ali Ahmed">
+    </div>
+    
+    <div class="form-group">
+      <label for="title">Professional Title</label>
+      <input type="text" id="title" placeholder="e.g. Software Engineer">
+    </div>
+    
+    <div class="form-group">
+      <label for="email">Email Address</label>
+      <input type="email" id="email" placeholder="e.g. ali.ahmed@example.com">
+    </div>
+    
+    <div class="form-group">
+      <label for="phone">Phone Number</label>
+      <input type="tel" id="phone" placeholder="e.g. +92 300 1234567">
+    </div>
+    
+    <div class="form-group">
+      <label for="address">Address</label>
+      <input type="text" id="address" placeholder="e.g. Karachi, Pakistan">
+    </div>
+    
+    <div class="form-group">
+      <label for="linkedin">LinkedIn URL</label>
+      <input type="url" id="linkedin" placeholder="https://linkedin.com/in/yourname">
+    </div>
+    
+    <div class="form-group">
+      <label for="github">GitHub URL</label>
+      <input type="url" id="github" placeholder="https://github.com/yourusername">
+    </div>
+    
+    <div class="form-group">
+      <label for="image">Profile Image URL</label>
+      <input type="url" id="image" placeholder="https://i.imgur.com/example.jpg">
+      <small style="color: var(--dark-gray);">Leave blank for default avatar</small>
+    </div>
+    
+    <h2 style="margin-top: 30px;"><i class="fas fa-bullseye"></i> Professional Details</h2>
+    
+    <div class="form-group">
+      <label for="summary">Professional Summary</label>
+      <textarea id="summary" rows="3" placeholder="A motivated professional with expertise in..."></textarea>
+    </div>
+    
+    <div class="form-group">
+      <label for="skills">Skills (comma separated)</label>
+      <input type="text" id="skills" placeholder="HTML, CSS, JavaScript, Project Management">
+    </div>
+    
+    <div class="form-group">
+      <label for="languages">Languages (comma separated)</label>
+      <input type="text" id="languages" placeholder="English, Urdu, French">
+    </div>
+    
+    <h2 style="margin-top: 30px;"><i class="fas fa-graduation-cap"></i> Education</h2>
+    
+    <div id="education-fields">
+      <div class="education-item">
+        <div class="form-group">
+          <label>Degree/Qualification</label>
+          <input type="text" class="education-degree" placeholder="e.g. BSCS Computer Science">
+        </div>
+        <div class="form-group">
+          <label>Institution</label>
+          <input type="text" class="education-institution" placeholder="e.g. University of Karachi">
+        </div>
+        <div class="form-group" style="display: flex; gap: 10px;">
+          <div style="flex: 1;">
+            <label>From Year</label>
+            <input type="text" class="education-from" placeholder="e.g. 2020">
+          </div>
+          <div style="flex: 1;">
+            <label>To Year</label>
+            <input type="text" class="education-to" placeholder="e.g. 2024 or Present">
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <button type="button" onclick="addEducationField()" style="background: var(--medium-gray); color: var(--text-color); margin-top: 5px;">
+      <i class="fas fa-plus"></i> Add Another Education
+    </button>
+    
+    <h2 style="margin-top: 30px;"><i class="fas fa-briefcase"></i> Work Experience</h2>
+    
+    <div id="experience-fields">
+      <div class="experience-item">
+        <div class="form-group">
+          <label>Job Title</label>
+          <input type="text" class="experience-title" placeholder="e.g. Software Developer">
+        </div>
+        <div class="form-group">
+          <label>Company</label>
+          <input type="text" class="experience-company" placeholder="e.g. ABC Technologies">
+        </div>
+        <div class="form-group" style="display: flex; gap: 10px;">
+          <div style="flex: 1;">
+            <label>From Year</label>
+            <input type="text" class="experience-from" placeholder="e.g. 2022">
+          </div>
+          <div style="flex: 1;">
+            <label>To Year</label>
+            <input type="text" class="experience-to" placeholder="e.g. 2023 or Present">
+          </div>
+        </div>
+        <div class="form-group">
+          <label>Description</label>
+          <textarea class="experience-description" rows="2" placeholder="Describe your responsibilities and achievements"></textarea>
+        </div>
+      </div>
+    </div>
+    
+    <button type="button" onclick="addExperienceField()" style="background: var(--medium-gray); color: var(--text-color); margin-top: 5px;">
+      <i class="fas fa-plus"></i> Add Another Experience
+    </button>
+    
+    <h2 style="margin-top: 30px;"><i class="fas fa-project-diagram"></i> Projects</h2>
+    
+    <div id="project-fields">
+      <div class="project-item">
+        <div class="form-group">
+          <label>Project Name</label>
+          <input type="text" class="project-name" placeholder="e.g. E-commerce Website">
+        </div>
+        <div class="form-group">
+          <label>Description</label>
+          <textarea class="project-description" rows="2" placeholder="Describe the project and technologies used"></textarea>
+        </div>
+      </div>
+    </div>
+    
+    <button type="button" onclick="addProjectField()" style="background: var(--medium-gray); color: var(--text-color); margin-top: 5px;">
+      <i class="fas fa-plus"></i> Add Another Project
+    </button>
+    
+    <button onclick="buildCV()">
+      <i class="fas fa-magic"></i> Generate My CV
+    </button>
+  </div>
+
+  <!-- CV Preview Section -->
+  <div class="cv-section">
+    <h2><i class="fas fa-eye"></i> CV Preview</h2>
+    <div class="cv-preview">
+      <div id="cv">
+        <div class="empty-state">
+          <i class="fas fa-file-alt"></i>
+          <p>Your professional A4 CV will appear here</p>
+          <p>Fill out the form and click "Generate My CV"</p>
+        </div>
+      </div>
+    </div>
+    
+    <div class="buttons-container">
+      <button onclick="window.print()" class="print-button">
+        <i class="fas fa-print"></i> Print CV
+      </button>
+      <button onclick="downloadCV()" class="download-button">
+        <i class="fas fa-download"></i> Download as PDF
+      </button>
+    </div>
+  </div>
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
